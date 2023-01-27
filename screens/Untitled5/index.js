@@ -6,12 +6,12 @@ const Untitled5 = ({
   navigation
 }) => {
   return <SafeAreaView style={styles.safeArea}>
-        <ScrollView contentContainerStyle={{
-      backgroundColor: '#f0f0f1',
-      padding: 10,
-      position: 'relative',
-      flex: 1
-    }}><Pressable onPress={() => navigation.navigation.navigate("undefined", {})}><View style={styles.yacRHXve}></View></Pressable></ScrollView>
+        <Pressable onPress={() => navigation.navigation.navigate("undefined", {})}><ScrollView contentContainerStyle={{
+        backgroundColor: '#f0f0f1',
+        padding: 10,
+        position: 'relative',
+        flex: 1
+      }}><Pressable onPress={() => navigation.navigation.navigate("undefined", {})}><View style={styles.yacRHXve}></View></Pressable></ScrollView></Pressable>
     </SafeAreaView>;
 };
 
