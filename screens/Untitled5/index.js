@@ -2,7 +2,7 @@ import { Pressable } from "react-native";
 import React from "react";
 import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
-const Untitled4 = ({
+const Untitled5 = ({
   navigation
 }) => {
   return <SafeAreaView style={styles.safeArea}>
@@ -11,7 +11,7 @@ const Untitled4 = ({
       padding: 10,
       position: 'relative',
       flex: 1
-    }}><Pressable onPress={() => navigation.navigation.navigate("undefined", {})}><View style={styles.jJgiuVwy}></View></Pressable></ScrollView>
+    }}><Pressable onPress={() => navigation.navigation.navigate("undefined", {})}><View style={styles.yacRHXve}></View></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   safeArea: {
     height: '100%'
   },
-  jJgiuVwy: {
+  yacRHXve: {
     height: 60,
     width: 140,
     backgroundColor: "#E4E4E4",
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
     color: "#777777"
   }
 });
-export default Untitled4;
+export default Untitled5;
