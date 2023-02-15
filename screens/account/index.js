@@ -1,10 +1,13 @@
-// @ts-nocheck
+import { faqList } from "./../../modules/faq/store/index.js"; // @ts-nocheck
+
 import React, { useEffect, useState } from "react";
 import { Text, View, StyleSheet, Image, TextInput, Pressable, ScrollView } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserInfo } from "../../store";
 
-const AccountScreen = () => {
+const AccountScreen = ({
+  navigation
+}) => {
   const dispatch = useDispatch();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -19,6 +22,8 @@ const AccountScreen = () => {
     if (!userInfo) {
       handleGetUser();
     }
+
+    dispatch(faqList());
   }, []);
   return <View style={styles.container}>
             <ScrollView>
@@ -35,7 +40,7 @@ const AccountScreen = () => {
 
                 <View style={styles.inputs}>
                     <View style={styles.inputContainer}>
-                        <Text style={styles.inputText}>First name</Text>
+                        <Pressable onPress={() => navigation.navigation.navigate("undefined", {})}><Text style={styles.inputText}>First name</Text></Pressable>
                         <TextInput style={styles.input} onChangeText={text => setFirstName(text)} value={userInfo?.first_name} placeholder="Enter" placeholderTextColor="#000" autoCapitalize="none" autoCorrect={false} />
 
                     </View>
@@ -122,7 +127,12 @@ const styles = StyleSheet.create({
   inputText: {
     fontSize: 13,
     marginLeft: 20,
-    color: "#111112"
+    color: "#4747ce",
+    position: "absolute",
+    top: 0,
+    left: 251,
+    transform: "rotate(0deg)",
+    textAlign: "left"
   },
   input: {
     borderWidth: 1,

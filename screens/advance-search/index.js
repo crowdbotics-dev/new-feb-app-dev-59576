@@ -1,8 +1,11 @@
+import { faqList } from "./../../modules/faq/store/index.js";
+import { useDispatch } from "react-redux";
 import React, { useState, useEffect } from "react";
 import { Slider } from "react-native-elements";
 import { Text, StyleSheet, View, ScrollView, SafeAreaView, Modal, Pressable, Alert, Image, FlatList } from "react-native";
 
 const AdvanceSearchScreen = params => {
+  const dispatch = useDispatch();
   const [modalVisible, setModalVisible] = useState(false);
   const [data, setData] = useState([]);
   const [ratingImages, setRatingImages] = useState([]);
@@ -36,6 +39,7 @@ const AdvanceSearchScreen = params => {
       selected: false
     }]);
     setRatingImages([require("./assets/1star.png"), require("./assets/2star.png"), require("./assets/3star.png"), require("./assets/4star.png"), require("./assets/5star.png")]);
+    dispatch(faqList());
   }, []);
   return <SafeAreaView style={styles.container}>
       <ScrollView>

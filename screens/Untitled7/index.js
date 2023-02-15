@@ -1,11 +1,18 @@
+import { faqList } from "./../../modules/faq/store/index.js";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import React from "react";
 import { ScrollView, Text, View, StyleSheet, Pressable, TextInput } from "react-native";
 
 const pressed = () => {
+  const dispatch = useDispatch();
   console.log("pressed");
 };
 
 const Profile = () => {
+  useEffect(() => {
+    dispatch(faqList());
+  }, []);
   return <ScrollView>
       <View style={styles.mainContainer}>
         <View>

@@ -1,9 +1,18 @@
+import { faqList } from "./../../modules/faq/store/index.js";
+import { updateItem } from "./../../modules/faq/store/index.js";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Text } from "react-native";
 import { ImageBackground } from "react-native";
 import React from "react";
 import { StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
 const Untitled9 = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(updateItem());
+    dispatch(faqList());
+  }, []);
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',

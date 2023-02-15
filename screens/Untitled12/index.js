@@ -1,15 +1,12 @@
 import { faqList } from "./../../modules/faq/store/index.js";
-import { updateItem } from "./../../modules/faq/store/index.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import React from "react";
 import { StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
-const Untitled8 = () => {
+const Untitled12 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(updateItem());
-    dispatch(faqList());
     dispatch(faqList());
   }, []);
   return <SafeAreaView style={styles.safeArea}>
@@ -27,4 +24,4 @@ const styles = StyleSheet.create({
     height: '100%'
   }
 });
-export default Untitled8;
+export default Untitled12;
