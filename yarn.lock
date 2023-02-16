@@ -1035,7 +1035,7 @@
 "@modules/faq@file:./modules/faq":
   version "1.0.0"
 
-"@modules/zoom-free-calling@file:./modules/zoom-free-calling/":
+"@modules/zoom-free-calling@file:./modules/zoom-free-calling":
   version "1.0.1"
   dependencies:
     react-native-base64 "0.2.1"
